@@ -178,7 +178,7 @@
   </div>
 </div>
 
-  <div class="swiper swiper-container">
+  <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="images/carousel/main (1).png" class="w-100 d-block"/>
@@ -596,15 +596,22 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-  var swiper = new Swiper(".swiper-container", {
-    spaceBetween: 30,
-    effect: "fade",
-    loop: true,
-    auroplay: {
-      delay: 3500,
-      disableoninteraction: false,
-    }
-  });
+    var swiper = new Swiper(".swiper-container", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   var swiper = new Swiper(".swiper-testimonials", {
       effect: "coverflow",
       grabCursor: true,
